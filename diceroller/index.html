@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head><style>ytd-live-chat-frame#chat { display: none; }</style><style>#watch-discussion, #watch7-discussion, ytd-comments { display: none; }</style>
+        <meta charset="utf-8">
+        <title>Dice roller</title>
+        <style>
+            body{
+                font-family:monospace;
+                font-size:12px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Roll some dice!</h2>
+        <p class="output"># of rolls: <span id="numRolls">0</span></p>
+        <p id="dice"></p>
+        <script>
+            var numRolls = 0;
+            var dice = [1, 1, 1, 1, 1];
+            var numRollsEl = document.getElementById("numRolls");
+            var diceEl = document.getElementById("dice")
+            var control = true;
+            while(control){
+                dice[0] = Math.floor((Math.random() * 6) + 1);
+                dice[1] = Math.floor((Math.random() * 6) + 1);
+                dice[2] = Math.floor((Math.random() * 6) + 1);
+                dice[3] = Math.floor((Math.random() * 6) + 1);
+                dice[4] = Math.floor((Math.random() * 6) + 1);
+                numRollsEl.innerHTML=numRolls
+                diceEl.innerHTML+=(dice +"&nbsp| ")
+                numRolls++
+                if(dice[0]==dice[1]&&dice[1]==dice[2]&&dice[2]==dice[3]&&dice[3]==dice[4]){
+                    control=false
+                }
+            }
+            diceEl.innerHTML+="Done!"
+        </script>
+    </body>
+</html>
