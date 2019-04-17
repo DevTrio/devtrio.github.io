@@ -1,2 +1,2 @@
-# devtrio.github.io
+# shyguysquad.github.io
 The webpage
