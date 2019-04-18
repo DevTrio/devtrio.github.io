@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta lang="en-US">
+		<title>How to code HTML | CSS | Part 1</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Roboto+Mono" rel="stylesheet">
+		<link rel="stylesheet" href="https://rawgit.com/Tetraforce/tetraforce.github.io/master/style.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	</head>
+	<body>
+		<h1>How to code HTML</h1>
+		<h3>Style</h3>
+		<h4>Fonts</h4>
+		<p>Looking at a webpage you may have created, you might want to change the way it looks. You can do that with CSS.</p>
+		<code>
+			body{<br/>
+			&nbsp;&nbsp;font-family: sans-serif;<br/>
+			}
+		</code>
+		<p>CSS stands for "cascading style sheets". The "cascading" part means that you can override attributes, which will be important soon.</p>
+		<p>What this bit of CSS does is change the font for everything in the <code class="inline">&lt;body&gt;</code> tag have a sans-serif font (like this one). The browser decides what font to display based on the user's selected default (in this case sans-serif) font. Your font selection can be more specific, like this:</p>
+		<code>
+			body{<br/>
+			&nbsp;&nbsp;font-family: "Roboto", sans-serif;
+			}
+		</code>
+		<p>In this case, the browser will attempt to display the webpage with the font "Roboto", and if that font is not found, it will fall back to the default sans-serif. <strong>It is <em>very important</em> that you add a fallback font. Without it, the browser will fall back to the default font, which is (usually) serif.</strong></p>
+		<p>The next chapter will cover more specific CSS selection.</p>
+		<button href="../2">NEXT<i class="material-icon">arrow_right</i></button>
+	</body>
+</html>
